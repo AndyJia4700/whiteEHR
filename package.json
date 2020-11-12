@@ -1,11 +1,12 @@
 {
-  "name": "WhiteEHR",
+  "name": "whiteehr",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.2.1",
+    "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -22,7 +23,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",

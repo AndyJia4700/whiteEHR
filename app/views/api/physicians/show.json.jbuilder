@@ -1,0 +1,1 @@
+json.partial! "api/physicians/physician", physician: @physician

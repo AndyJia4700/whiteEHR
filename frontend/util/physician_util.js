@@ -11,7 +11,7 @@ export const fetchPhysician = (physicianId) => {
     })
 };
 
-export const updatephysician = (formData, physicianId) => {
+export const updatePhysician = (formData, physicianId) => {
     // debugger;
     return $.ajax({
         method: 'PATCH',

@@ -47,7 +47,7 @@ class App extends React.Component{
 
         return (
           <div>
-            <Modal />
+            {/* <Modal /> */}
             {/* {nav} */}
 
             <div>

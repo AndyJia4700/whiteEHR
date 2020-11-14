@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { createNewUser } from '../../actions/session_actions';
+import { createNewPhysician } from '../../actions/session_actions';
 
 const mSTP = ({errors}) => ({
     errors: errors,
@@ -12,7 +12,7 @@ const mSTP = ({errors}) => ({
 const mDTP = dispatch => {
     // debugger;
     return {
-    createNewUser: formUser => dispatch(createNewUser(formUser))
+    createNewPhysician: formPhysician => dispatch(createNewPhysician(formPhysician))
     }
 };
 
@@ -35,7 +35,7 @@ class SignUpForm extends React.Component {
   
     handleSubmit(e){
         e.preventDefault();
-        this.props.createNewUser(Object.assign({}, this.state))
+        this.props.createNewPhysician(Object.assign({}, this.state))
     }
 
 

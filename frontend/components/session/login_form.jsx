@@ -16,7 +16,7 @@ const mSTP = ({ errors }) => ({
 const mDTP = (dispatch) => {
   // debugger;
   return {
-    login: (formUser) => dispatch(login(formUser)),
+    login: (formPhysician) => dispatch(login(formPhysician)),
   };
 };
 

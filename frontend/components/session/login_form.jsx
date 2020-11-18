@@ -49,7 +49,7 @@ class LogInForm extends React.Component {
     e.preventDefault();
     this.setState(
       {
-        email: "000@demo.com",
+        email: "000@test.com",
         password: "123456",
       },
       () => this.props.login(Object.assign({}, this.state))

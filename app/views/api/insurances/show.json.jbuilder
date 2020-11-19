@@ -1,0 +1,1 @@
+json.partial! "api/insurances/insurance", insurance: @insurance

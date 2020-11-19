@@ -9,5 +9,5 @@
 #  updated_at       :datetime         not null
 #
 class Insurance < ApplicationRecord
-  
+  validates :insurance_name, uniqueness: true
 end

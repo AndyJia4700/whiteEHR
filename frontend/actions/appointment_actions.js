@@ -1,40 +1,40 @@
-import * as TagUtil from "../util/tag_util";
+import * as AppointmentUtil from "../util/appointment_util";
 
-export const RECEIVE_ALL_TAGS = "RECEIVE_ALL_TAGS";
-export const RECEIVE_TAG = "RECEIVE_TAG";
-export const REMOVE_TAG = "REMOVE_TAG";
+export const RECEIVE_ALL_APPOINTMENTS = "RECEIVE_ALL_APPOINTMENTS";
+export const RECEIVE_APPOINTMENT = "RECEIVE_APPOINTMENT";
+export const REMOVE_APPOINTMENT = "REMOVE_APPOINTMENT";
 
-const receiveAllTags = (tags) => ({
-  type: RECEIVE_ALL_TAGS,
-  tags,
+const receiveAllAppointments = (appointments) => ({
+  type: RECEIVE_ALL_APPOINTMENTS,
+  appointments,
 });
 
-const receiveTag = (tag) => ({
-  type: RECEIVE_TAG,
-  tag,
+const receiveAppointment = (appointment) => ({
+  type: RECEIVE_APPOINTMENT,
+  appointment,
 });
 
-const removeTag = (tagId) => ({
-  type: REMOVE_TAG,
-  tagId,
+const removeAppointment = (appointmentId) => ({
+  type: REMOVE_APPOINTMENT,
+  appointmentId,
 });
 
-export const fetchTags = () => (dispatch) =>
-  TagUtil.fetchTags().then((tags) =>
-    dispatch(receiveAllTags(tags))
+export const fetchAppointments = () => (dispatch) =>
+  AppointmentUtil.fetchAppointments().then((appointments) =>
+    dispatch(receiveAllAppointments(appointments))
   );
 
-export const fetchTag = (tagId) => (dispatch) =>
-  TagUtil.fetchTag(tagId).then((tag) =>
-    dispatch(receiveTag(tag))
+export const fetchAppointment = (appointmentId) => (dispatch) =>
+  AppointmentUtil.fetchAppointment(appointmentId).then((appointment) =>
+    dispatch(receiveAppointment(appointment))
   );
 
-export const createTag = (tag) => (dispatch) =>
-  TagUtil.createTag(tag).then((tag) =>
-    dispatch(receiveTag(tag))
+export const createAppointment = (appointment) => (dispatch) =>
+  AppointmentUtil.createAppointment(appointment).then((appointment) =>
+    dispatch(receiveAppointment(appointment))
   );
 
-export const deleteTag = (tagId) => (dispatch) =>
-  TagUtil.deleteTag(tagId).then(() =>
-    dispatch(removeTag(tagId))
+export const deleteAppointment = (appointmentId) => (dispatch) =>
+  AppointmentUtil.deleteAppointment(appointmentId).then(() =>
+    dispatch(removeAppointment(appointmentId))
   );

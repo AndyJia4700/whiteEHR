@@ -9,6 +9,17 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <% if current_physician %>
+  
+    <script>
+      window.currentPhysician = <%= render(
+        "api/physicians/physician.json.jbuilder",
+        physician: current_physician
+      ).html_safe %>
+    </script>
+
+  <% end %>
+
   <body>
     <%= yield %>
   </body>

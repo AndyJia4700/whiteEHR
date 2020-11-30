@@ -15,7 +15,7 @@ const SessionShow = ({currentPhysician, openModal}) => {
             <Link to="/login" className="">Log in</Link>
     );
     
-    const photo = (currentPhysician && currentPhysician.photoUrl) ? <img src={currentPhysician.photoUrl} className="tiny-photo"/> : <img className="tiny-no-photo"/>
+    const photo = (currentPhysician && currentPhysician.photoUrl) ? <img src={currentPhysician.photoUrl} className="tiny-photo"/> : "Please edit your profile"
     
     const greeting = () => (
         <a onClick={() => openModal('profileDropDown')}>

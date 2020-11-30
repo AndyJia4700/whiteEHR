@@ -21,19 +21,8 @@ class App extends React.Component{
         const nav = (
           <nav className="nav-top">
             <div className="nav-top-element">
-              <a href="#/projects">Explore</a>
+              <a href="">Schedule</a>
             </div>
-
-            <div className="sesame-word-logo-div">
-              <a href="#/">
-                <img src={window.sesameteamwordURL} />
-              </a>
-            </div>
-
-            {/* <div>
-              <FiSearch />
-              <input type="text" placeholder="search" />
-            </div> */}
 
             <div className="nav-top-element">
               <SessionShow />
@@ -41,19 +30,16 @@ class App extends React.Component{
           </nav>
         );
 
-        // const footer = (
-        //   <Footer/>
-        // );
 
         return (
           <div>
-            {/* <Modal /> */}
-            {/* {nav} */}
+            <Modal />
+            {nav}
 
             <div>
-              {/* <Route exact path="/" component={SplashPage} />
+              {/* <Route exact path="/" component={SplashPage} /> */}
 
-              <Route exact path="/users/:userId" component={ProfileShow} />
+              {/* <Route exact path="/users/:userId" component={ProfileShow} />
               
               <ProtRoute exact path="/users/:userId/edit" component={ProfileEdit} /> */}
 

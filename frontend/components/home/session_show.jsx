@@ -7,6 +7,7 @@ const mSTP = state => ({
     currentPhysician: state.session.currentPhysician
 })
 
+
 const mDTP = dispatch => ({
     openModal: modal => dispatch(openModal(modal))
 })

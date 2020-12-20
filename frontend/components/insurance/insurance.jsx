@@ -8,7 +8,6 @@ class Insurance extends React.Component {
     }
     render(){
         return null
-   
     }
 }
 
